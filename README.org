@@ -1,0 +1,19 @@
+#+TITLE: @CodeSplain
+
+* Intro
+This project is a feminist twitter bot.  We have all expressed
+interest in making twitterbots with out fearless leader, the
+irrepressable Jojo Karlin.  The project randomly generates "Things
+bro-grammers say to Girl coders."  The idea resonates because
+sometimes it seems sexism is hardcoded into the world.  We just want
+to do our part to subvert and laugh it.
+
+* Contributors
+- Jojo Karlin (maintainer)
+- Erin Glass 
+- Mary Catherine Kinniburgh
+- Julia Anna Pollack 
+- Kelly Blanchat 
+- Sarah Cohn 
+- Patrick Smyth 
+- Evan Misshula 
