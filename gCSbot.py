@@ -5,10 +5,10 @@ import tweepy
 import time
 import sys
 
-CONSUMER_KEY = 'n1MTLlo7QO6wF4RxG5a7TJxuQ'
-CONSUMER_SECRET = 'PEYBJagwoyWPa6IKnpUC2XGW8aowLS603Hkk7Q9fvp1gnpPGO6'
-ACCESS_KEY = '3125708770-vmSH6fxI58hJQBhLLehFNGuc7ipg3BlIvyM9k0R'
-ACCESS_SECRET = 'ixP2zAUFH7tAF9uiwrHqgGO9eWR0TQyhLlLLoUSr3o3DN'
+CONSUMER_KEY = '#####'
+CONSUMER_SECRET = '#####'
+ACCESS_KEY = '#####'
+ACCESS_SECRET = '#####'
 
 argfile = str(sys.argv[1])
 
