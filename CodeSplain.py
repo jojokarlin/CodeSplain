@@ -74,6 +74,7 @@ computer_adjectives = [
 
 """
 techterm = [
+    "Java",
     "python",
     "CSS",
     "APIs",
@@ -81,6 +82,8 @@ techterm = [
     "IDEs",
     "Ruby",
     "Javascript",	
+    "SQL",
+    "the Command line",
     ]
 
 manterm = [
@@ -113,6 +116,7 @@ guystereo = [
     "man math",
     "fishing",
     "engineering",
+    "mobius strips"
     ]
 
 hashtag = [
@@ -127,6 +131,11 @@ domestic = [
     "baking a pie",
     "getting dressed",
     "pillow fighting",
+    "having a monthly",
+    "powdering your nose",
+    "wearing high heels",
+    "standing in line for the bathroom",
+    "horoscopes",
     ]
 
 manadj = [
@@ -139,7 +148,6 @@ manadj = [
     "muscular",
     "adult",
     "brave",
-    "hearty",
     "rugged",
     "male",
     "studly",
@@ -156,10 +164,10 @@ def gotthis_gen():
     return("Don't worry about %s, the %s will handle that." %(random.choice(techterm),random.choice(manterm)))
 
 def weknowbetter_gen():
-    return("It's ok if you can't %s; it's a %s you wouldn't understand." %(random.choice(code_language),random.choice(guystereo)))
+    return("It's ok if you can't do %s; it's %s you wouldn't understand." %(random.choice(code_language),random.choice(guystereo)))
 
 def cool_gen():
-    return("Just imagine you're %s only %s." %(random.choice(domestic), random.choice(manadj)))
+    return("Just imagine you're %s, only %s." %(random.choice(domestic), random.choice(manadj)))
 
 # This function randonly picks one of the above templates
 # and and rcalls it to create a sentence
