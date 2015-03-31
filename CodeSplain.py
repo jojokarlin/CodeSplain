@@ -170,16 +170,16 @@ def generate_sentence():
         return weknowbetter_gen()
     if rolldice == 2:
         return cool_gen()
-
-    if len(rolldice) <= 140:
-        write(rolldice)
-        write("\n")
-    else:
-        pass
+    while 1:
+        if len(rolldice) <= 140:
+            write(rolldice)
+            write("\n")
+        else:
+            break
 
 tfile = open("brotweets.txt", "w")
 for numtweets in range(0,100):
-    tfile.write(generate_sentence())
+    tfile.write(rolldice())
 
 tfile.close()
 
