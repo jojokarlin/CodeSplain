@@ -124,6 +124,7 @@ hashtag = [
     "#brocode",
     "#brogrammers",
     "#gotthis",
+    "#yolo",
     ]
 
 domestic = [
