@@ -116,7 +116,8 @@ guystereo = [
     "man math",
     "fishing",
     "engineering",
-    "mobius strips"
+    "mobius strips",
+    "craft beer",
     ]
 
 hashtag = [
@@ -169,18 +170,23 @@ def weknowbetter_gen():
 def cool_gen():
     return("Just imagine you're %s, only %s." %(random.choice(domestic), random.choice(manadj)))
 
+def cute_gen():
+    return("You're so cute when you try %s." %(random.choice(techterm)))
+
 # This function randonly picks one of the above templates
 # and and rcalls it to create a sentence
 def generate_sentence():
     tfile = open("brotweets.txt", "w")
     for xlx in range(0,100):
-        rolldice = random.randint(0,2)
+        rolldice = random.randint(0,3)
         if rolldice == 0:
             template = gotthis_gen()
         if rolldice == 1:
             template = weknowbetter_gen()
         if rolldice == 2:
             template = cool_gen()
+        if rolldice == 3:
+            template = cute_gen()
         while 1:
             if len(template) <= 140:
                 tfile.write(template)
