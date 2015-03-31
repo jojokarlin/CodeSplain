@@ -172,8 +172,8 @@ def generate_sentence():
         return cool_gen()
 
     if len(rolldice) <= 140:
-        print(generate_sentence())
-        print("\n")
+        write(generate_sentence())
+        write("\n")
     else:
         pass
 
