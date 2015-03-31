@@ -153,7 +153,7 @@ manadj = [
 #define function for each template
 
 def gotthis_gen():
-    return("Don't worry about %s, the %ss will handle that." %(random.choice(techterm),random.choice(manterm)))
+    return("Don't worry about %s, the %s will handle that." %(random.choice(techterm),random.choice(manterm)))
 
 def weknowbetter_gen():
     return("It's ok if you can't %s; it's a %s you wouldn't understand." %(random.choice(code_language),random.choice(guystereo)))
@@ -171,10 +171,11 @@ def generate_sentence():
     if rolldice == 2:
         return cool_gen()
 
-if len(rolldice) <= 140:
-    print(generate_sentence())
-else:
-    pass
+    if len(rolldice) <= 140:
+        print(generate_sentence())
+        print("\n")
+    else:
+        pass
 
 tfile = open("brotweets.txt", "w")
 for numtweets in range(0,100):
