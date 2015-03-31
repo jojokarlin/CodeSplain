@@ -3,6 +3,76 @@
 
 import random
 
+#Create word lists 
+"""
+computer_adjectives = [
+    "minimal",
+    "neural",
+    "synaptic",
+    "solid state",
+    "asymptotic",
+    "concurrent",
+    "multithreaded",
+    "augmented",
+    "presingularity",
+    "responsive",
+    "Cartesian",
+    "extreme",
+    "critical",
+    "Matrioshka",
+    "meatspace",
+    "trinary",
+    "recursive",
+    "Pythonic",
+    "functional",
+    "imperitive",
+    "backend",
+    "trontend",
+    "social",
+    "bio",
+    "strategic",
+    "sustainable",
+    "value added",
+    "holistic",
+    "nano",
+    "granular",
+    "cloud",
+    "content",
+    "core",
+    "brick-and-mortar",
+    "digital",
+    "cyber",
+    "mono",
+    "uni",
+    "duplo",
+    "curve",
+    "cloud",
+    "geodesic",
+    "colocal",
+    "electronic",
+    "transcendant",
+    "programatic",
+    "media agnostic",
+    "immersive",
+    "technocratic",
+    "AI",
+    "VC",
+    "procedural",
+    "effective",
+    "full spectrum",
+    "analytic",
+    "peer-to-peer",
+    "b2b",
+    "semiotic",
+    "best practice",
+    "new",
+    "viral",
+    "zero-sum",
+    "maker",
+    "convergence",
+    ]
+
+"""
 techterm = [
     "python",
     "CSS",
@@ -21,6 +91,7 @@ manterm = [
     "men folk",
     "dudes",
     "guys",
+    "manalytics",
     ]
 
 code_language = [
@@ -44,19 +115,85 @@ guystereo = [
     "engineering",
     ]
 
+hashtag = [
+    "#brocode",
+    "#brogrammers",
+    "#gotthis",
+    ]
+
+domestic = [
+    "shopping",
+    "putting on makeup",
+    "baking a pie",
+    "getting dressed",
+    "pillow fighting",
+    ]
+
+manadj = [
+    "tough",
+    "burly",
+    "stronger",
+    "serious",
+    "not girly",
+    "macho",
+    "muscular",
+    "adult",
+    "brave",
+    "hearty",
+    "rugged",
+    "male",
+    "studly",
+    "redblooded",
+    "heavy-duty",
+    "brawny",
+    "mighty",
+    "athletic",
+    ]
+
+#define function for each template
+
 def gotthis_gen():
-    return("Don't worry about %s, the %ss will handle that." %(random.choice(techterm),random.choice(manterm))
-
-print(gotthis_gen())
-
+    return("Don't worry about %s, the %ss will handle that." %(random.choice(techterm),random.choice(manterm)))
 
 def weknowbetter_gen():
-    return("It's ok if you can't %s; I taught myself for %s you wouldn't understand." %(random.choice(code_language),random.choice(guystereo))
-"""
+    return("It's ok if you can't %s; it's a %s you wouldn't understand." %(random.choice(code_language),random.choice(guystereo)))
 
-tfile = open("tweets.txt", "w")
+def cool_gen():
+    return("Just imagine you're %s only %s." %(random.choice(domestic), random.choice(manadj)))
+# This function randonly picks one of the above templates
+# and and rcalls it to create a sentence
+def generate_sentence():
+    rolldice = random.randint(0,2)
+    if rolldice == 0:
+        return gotthis_gen()
+    if rolldice == 1:
+        return weknowbetter_gen()
+    if rolldice == 2:
+        return cool_gen()
+
+if len(rolldice) <= 140:
+    print(generate_sentence())
+else:
+    pass
+
+tfile = open("brotweets.txt", "w")
 for numtweets in range(0,100):
-    tfile.write(story_gen())
-    tfile.write("\n")
+    tfile.write(generate_sentence())
 
 tfile.close()
+
+
+#tfile = open("brotweets.txt", 'w')
+
+# Create variable for the site name and a random buzzword hashtag
+#site = "CodeSplain.com"
+#hashtag1 = " #" + random.choice(manterm) + random.choice(guystereo)
+
+
+#sen1 = generate_sentence() + " " + site + hashtag1
+#print(sen1)
+#print(len(sen1))
+
+# Wites 100 tweets to tweets.py
+# If there's room, also adds two more hashtags to the tweet
+# The /n creates a new line.

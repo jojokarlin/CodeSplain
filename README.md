@@ -12,11 +12,11 @@
 # Intro<a id="sec-1"></a>
 
 This project is a feminist twitter bot.  We have all expressed
-interest in making twitterbots with out fearless leader, the
+interest in making twitterbots with our fearless leader, the
 irrepressible Jojo Karlin.  The project randomly generates "Things
 bro-grammers say to Girl coders."  The idea resonates because
 sometimes it seems sexism is hardcoded into the world.  We just want
-to do our part to subvert and laugh it.
+to do our part to subvert and laugh at it.
 
 # Contributors<a id="sec-2"></a>
 
