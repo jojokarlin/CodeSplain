@@ -127,7 +127,6 @@ domestic = [
     "baking a pie",
     "getting dressed",
     "pillow fighting",
-    "doing a girl thing"
     ]
 
 manadj = [
@@ -160,34 +159,41 @@ def weknowbetter_gen():
     return("It's ok if you can't %s; it's a %s you wouldn't understand." %(random.choice(code_language),random.choice(guystereo)))
 
 def cool_gen():
-    return("Just imagine you're %s, only %s." %(random.choice(domestic), random.choice(manadj)))
+    return("Just imagine you're %s only %s." %(random.choice(domestic), random.choice(manadj)))
+
 # This function randonly picks one of the above templates
 # and and rcalls it to create a sentence
 def generate_sentence():
-    rolldice = random.randint(0,2)
-    if rolldice == 0:
-        return gotthis_gen()
-    if rolldice == 1:
-        return weknowbetter_gen()
-    if rolldice == 2:
-        return cool_gen()
-    while 1:
-        if len(rolldice) <= 140:
-            write(rolldice)
-            write("\n")
-        else:
-            break
-print generate_sentence()
+    tfile = open("brotweets.txt", "w")
+    for xlx in range(0,100):
+        rolldice = random.randint(0,2)
+        if rolldice == 0:
+            template = gotthis_gen()
+        if rolldice == 1:
+            template = weknowbetter_gen()
+        if rolldice == 2:
+            template = cool_gen()
+        while 1:
+            if len(template) <= 140:
+                tfile.write(template)
+                tfile.write("\n")
+                break
+            else:
+                pass
+    tfile.close()
 
-tfile = open("brotweets.txt", "w")
-for numtweets in range(0,100):
-    tfile.write(generate_sentence())
-    tfile.write("\n")
+generate_sentence()
 
-tfile.close()
+        
 
 
-#tfile = open("brotweets.txt", 'w')
+
+
+
+
+
+
+
 
 # Create variable for the site name and a random buzzword hashtag
 #site = "CodeSplain.com"
