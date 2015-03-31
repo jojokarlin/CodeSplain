@@ -124,6 +124,8 @@ hashtag = [
     "#brocode",
     "#brogrammers",
     "#gotthis",
+    "#yolo",
+    "#realtalk",
     ]
 
 domestic = [
@@ -137,6 +139,7 @@ domestic = [
     "wearing high heels",
     "standing in line for the bathroom",
     "horoscopes",
+    "having girls night"
     ]
 
 manadj = [
@@ -157,6 +160,8 @@ manadj = [
     "brawny",
     "mighty",
     "athletic",
+    "with balls",
+    "with a wrench",
     ]
 
 #define function for each template
@@ -173,12 +178,15 @@ def cool_gen():
 def cute_gen():
     return("You're so cute when you try %s." %(random.choice(techterm)))
 
+def confuze():
+    return("Oh, it's simple you just %s the %s" %(random.choice(techterm), random.choice(techterm)))
+
 # This function randonly picks one of the above templates
 # and and rcalls it to create a sentence
 def generate_sentence():
     tfile = open("brotweets.txt", "w")
     for xlx in range(0,100):
-        rolldice = random.randint(0,3)
+        rolldice = random.randint(0,4)
         if rolldice == 0:
             template = gotthis_gen()
         if rolldice == 1:
@@ -187,6 +195,8 @@ def generate_sentence():
             template = cool_gen()
         if rolldice == 3:
             template = cute_gen()
+        if rolldice == 4:
+            template = confuze()
         while 1:
             if len(template) <= 140:
                 tfile.write(template)
