@@ -165,7 +165,7 @@ def gotthis_gen():
     return("Don't worry about %s, the %s will handle that." %(random.choice(techterm),random.choice(manterm)))
 
 def weknowbetter_gen():
-    return("It's ok if you can't do %s; it's %s you wouldn't understand." %(random.choice(code_language),random.choice(guystereo)))
+    return("It's ok if you can't do %s; it's a %s thing you wouldn't understand." %(random.choice(code_language),random.choice(guystereo)))
 
 def cool_gen():
     return("Just imagine you're %s, only %s." %(random.choice(domestic), random.choice(manadj)))
