@@ -120,6 +120,10 @@ guystereo = [
     "mobius strips",
     "craft beer",
     "boys' business",
+    "carpentry",
+    "building things",
+    "practical",
+    "useful",
     ]
 
 hashtag = [
