@@ -181,6 +181,13 @@ lady = [
     "emotional",
     ]
 
+male = [
+    "boyfriend",
+    "husband",
+    "guy friend",
+    "boss",
+    ]
+
 #define function for each template
 
 def gotthis_gen():
@@ -202,14 +209,18 @@ def chuckle():
     return("Oh, you don't get the difference between %s and %s? heh heh hehheh%shehehe" %(random.choice(techterm), random.choice(techterm), random.choice(techterm)))
 
 def girly():
-    return("That's impressive %s for someone so %s." %(random.choice(techterm), random.choice(lady)))
+    return("That's impressive %s for someone so %s. Did your %s help you?" %(random.choice(techterm), random.choice(lady), random.choice(male)))
+
+def oneup():
+    return("Oh, you use %s? I guess that works if you don't know %s."%(random.choice(techterm), random.choice(techterm)))
 
 # This function randonly picks one of the above templates
 # and and rcalls it to create a sentence
+
 def generate_sentence():
     tfile = open("brotweets.txt", "w")
     for xlx in range(0,100):
-        rolldice = random.randint(0,6)
+        rolldice = random.randint(0,7)
         if rolldice == 0:
             template = gotthis_gen()
         if rolldice == 1:
@@ -224,6 +235,8 @@ def generate_sentence():
             template = chuckle()
         if rolldice == 6:
             template = girly()
+        if rolldice == 7:
+            template = oneup()
 
         while 1:
             if len(template) <= 140:
