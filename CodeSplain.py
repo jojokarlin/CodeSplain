@@ -106,6 +106,7 @@ code_language = [
     "IDEs",
     "Ruby",
     "Javascript",
+    "Django"
 
         ]
 
@@ -167,6 +168,15 @@ manadj = [
     "like a beast",
     ]
 
+lady = [
+    "sweet",
+    "young",
+    "pretty",
+    "sensitive",
+    "prone to hysterics",
+    "emotional",
+    ]
+
 #define function for each template
 
 def gotthis_gen():
@@ -185,14 +195,17 @@ def confuze():
     return("Oh, it's simple. You just %s the %s." %(random.choice(techterm), random.choice(techterm)))
 
 def chuckle():
-    return("Oh, you didn't %s? heh heh hehheh%shehehe" %(random.choice(techterm), random.choice(techterm)))
+    return("Oh, you don't get the difference between %s and %s? heh heh hehheh%shehehe" %(random.choice(techterm), random.choice(techterm), random.choice(techterm)))
+
+def girly():
+    return("That's impressive %s for someone so %s." %(random.choice(techterm), random.choice(lady)))
 
 # This function randonly picks one of the above templates
 # and and rcalls it to create a sentence
 def generate_sentence():
     tfile = open("brotweets.txt", "w")
     for xlx in range(0,100):
-        rolldice = random.randint(0,5)
+        rolldice = random.randint(0,6)
         if rolldice == 0:
             template = gotthis_gen()
         if rolldice == 1:
@@ -205,6 +218,9 @@ def generate_sentence():
             template = confuze()
         if rolldice == 5:
             template = chuckle()
+        if rolldice == 6:
+            template = girly()
+
         while 1:
             if len(template) <= 140:
                 tfile.write(template)
