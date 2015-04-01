@@ -179,14 +179,17 @@ def cute_gen():
     return("You're so cute when you try %s." %(random.choice(techterm)))
 
 def confuze():
-    return("Oh, it's simple you just %s the %s" %(random.choice(techterm), random.choice(techterm)))
+    return("Oh, it's simple you just %s the %s." %(random.choice(techterm), random.choice(techterm)))
+
+def chuckle():
+    return("Oh, you didn't %s? heh heh hehheh%shehehe" %(random.choice(techterm), random.choice(techterm)))
 
 # This function randonly picks one of the above templates
 # and and rcalls it to create a sentence
 def generate_sentence():
     tfile = open("brotweets.txt", "w")
     for xlx in range(0,100):
-        rolldice = random.randint(0,4)
+        rolldice = random.randint(0,5)
         if rolldice == 0:
             template = gotthis_gen()
         if rolldice == 1:
@@ -197,6 +200,8 @@ def generate_sentence():
             template = cute_gen()
         if rolldice == 4:
             template = confuze()
+        if rolldice == 5:
+            template = chuckle()
         while 1:
             if len(template) <= 140:
                 tfile.write(template)
