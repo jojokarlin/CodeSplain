@@ -179,7 +179,7 @@ def cute_gen():
     return("You're so cute when you try %s." %(random.choice(techterm)))
 
 def confuze():
-    return("Oh, it's simple you just %s the %s." %(random.choice(techterm), random.choice(techterm)))
+    return("Oh, it's simple. You just %s the %s." %(random.choice(techterm), random.choice(techterm)))
 
 def chuckle():
     return("Oh, you didn't %s? heh heh hehheh%shehehe" %(random.choice(techterm), random.choice(techterm)))
