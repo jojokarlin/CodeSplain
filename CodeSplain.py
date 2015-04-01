@@ -118,6 +118,7 @@ guystereo = [
     "engineering",
     "mobius strips",
     "craft beer",
+    "boys' business",
     ]
 
 hashtag = [
@@ -139,7 +140,8 @@ domestic = [
     "wearing high heels",
     "standing in line for the bathroom",
     "horoscopes",
-    "having girls night"
+    "having girls night",
+    "doing your hair",
     ]
 
 manadj = [
@@ -162,6 +164,7 @@ manadj = [
     "athletic",
     "with balls",
     "with a wrench",
+    "like a beast",
     ]
 
 #define function for each template
