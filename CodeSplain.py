@@ -87,7 +87,6 @@ techterm = [
     ]
 
 manterm = [
-    
     "boys",
     "men",
     "bros",
@@ -188,6 +187,13 @@ male = [
     "boss",
     ]
 
+hashtags = [
+    '#hashtag1',
+    '#hashtag2',
+    '#hashtag3',
+    ]
+
+
 #define function for each template
 
 def gotthis_gen():
@@ -240,6 +246,12 @@ def generate_sentence():
 
         while 1:
             if len(template) <= 140:
+                for dothree in range(0,3):
+                    hashtag = random.choice(hashtags)
+                    if len(template) + len(hashtag) <= 140:
+                        template = template + " " + hashtag
+                    else:
+                        pass
                 tfile.write(template)
                 tfile.write("\n")
                 break
@@ -250,14 +262,6 @@ def generate_sentence():
 generate_sentence()
 
         
-
-
-
-
-
-
-
-
 
 
 # Create variable for the site name and a random buzzword hashtag

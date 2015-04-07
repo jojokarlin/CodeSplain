@@ -1,15 +1,4 @@
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="#sec-1">1. Intro</a></li>
-<li><a href="#sec-2">2. Contributors</a></li>
-</ul>
-</div>
-</div>
-
-
-# Intro<a id="sec-1"></a>
+# CodeSplain <a id="sec-1"></a>
 
 This project is a feminist twitter bot.  We have all expressed
 interest in making twitterbots with our fearless leader, the
